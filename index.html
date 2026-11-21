@@ -1,247 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Personal portfolio of Miftahul Jannat Lamia, CSE student at AIUB.">
-  <title>Miftahul Jannat Lamia | Portfolio</title>
-  <style>
-    :root {
-      --navy: #142b4a;
-      --blue: #256b91;
-      --sky: #eaf4fa;
-      --ink: #243244;
-      --muted: #637286;
-      --white: #ffffff;
-      --line: #dce6ee;
-    }
-    * { box-sizing: border-box; scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--ink);
-      background: #f5f8fb;
-      line-height: 1.65;
-    }
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(255,255,255,.96);
-      border-bottom: 1px solid var(--line);
-      padding: 14px 7%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-    }
-    .brand { color: var(--navy); font-weight: 800; letter-spacing: .3px; }
-    nav { display: flex; flex-wrap: wrap; gap: 18px; }
-    nav a { color: var(--ink); text-decoration: none; font-size: .92rem; font-weight: 700; }
-    nav a:hover { color: var(--blue); }
-    .hero {
-      padding: 86px 8% 78px;
-      color: white;
-      background: linear-gradient(125deg, #142b4a 0%, #256b91 70%, #4b91b4 100%);
-    }
-    .hero-inner { max-width: 1050px; margin: auto; }
-    .eyebrow { color: #d9effa; text-transform: uppercase; letter-spacing: 2px; font-size: .8rem; font-weight: 700; }
-    h1 { font-size: clamp(2.2rem, 6vw, 4.1rem); line-height: 1.1; margin: 12px 0; }
-    .hero p { max-width: 680px; color: #edf7fc; font-size: 1.1rem; }
-    .hero-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
-    .btn {
-      display: inline-block; text-decoration: none; padding: 11px 18px;
-      border-radius: 8px; font-weight: 700; background: white; color: var(--navy);
-    }
-    .btn.outline { background: transparent; border: 1px solid #dceefa; color: white; }
-    main { max-width: 1050px; margin: 34px auto 70px; padding: 0 22px; }
-    section {
-      background: var(--white); border: 1px solid var(--line); border-radius: 16px;
-      padding: 30px; margin: 22px 0; box-shadow: 0 8px 26px rgba(20,43,74,.045);
-    }
-    h2 { margin: 0 0 16px; color: var(--navy); font-size: 1.55rem; }
-    h3 { color: var(--navy); margin: 0 0 7px; }
-    .lead { color: var(--muted); max-width: 820px; margin-top: 0; }
-    .education {
-      border-left: 4px solid var(--blue); padding: 4px 0 4px 17px;
-    }
-    .skills { display: flex; flex-wrap: wrap; gap: 10px; }
-    .skill {
-      background: var(--sky); color: var(--navy); padding: 8px 13px;
-      border-radius: 30px; font-size: .92rem; font-weight: 700;
-    }
-    .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px; }
-    .project {
-      border: 1px solid var(--line); border-radius: 12px; padding: 20px;
-      background: #fcfdff;
-    }
-    .project .tech { color: var(--blue); font-size: .88rem; font-weight: 700; }
-    .contact-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
-    .contact-item { background: #f6f9fc; border-radius: 10px; padding: 14px; }
-    .contact-item strong { display: block; color: var(--navy); font-size: .85rem; }
-    .contact-item a { color: var(--blue); text-decoration: none; overflow-wrap: anywhere; }
-    footer { text-align: center; padding: 26px 18px; color: var(--muted); font-size: .9rem; }
-    @media (max-width: 700px) {
-      .topbar { align-items: flex-start; flex-direction: column; }
-      nav { gap: 10px 15px; }
-      .hero { padding: 62px 7% 58px; }
-      section { padding: 22px; }
-      .project-grid, .contact-list { grid-template-columns: 1fr; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Miftahul Jannat Lamia — Computer Science and Engineering student portfolio">
+<title>Miftahul Jannat Lamia | Portfolio</title>
+<style>
+:root{--navy:#101b35;--blue:#4566d8;--ink:#19243a;--muted:#68758d;--bg:#f4f6fb;--line:#e3e8f2;--white:#fff}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Segoe UI,Arial,sans-serif;line-height:1.65}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:9;background:#ffffffed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-weight:900;letter-spacing:.09em;color:var(--navy)}.brand span{color:var(--blue)}
+.navlinks{display:flex;gap:21px;align-items:center;font-size:.9rem;color:#536078}.navlinks a:hover{color:var(--blue)}
+.hero{color:white;background:radial-gradient(circle at 85% 18%,#3b579d 0,transparent 29%),linear-gradient(125deg,#101b35,#192e58 72%,#2c477f);padding:94px 0 86px}
+.hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:46px;align-items:center}
+.eyebrow,.kicker{font-size:.76rem;letter-spacing:.19em;text-transform:uppercase;font-weight:800}
+.eyebrow{color:#bdcbff}
+h1{font-size:clamp(2.8rem,6vw,5rem);line-height:1.03;letter-spacing:-.05em;margin:17px 0}
+h1 span{color:#aebfff}.hero p{max-width:650px;color:#dce4f5;font-size:1.06rem}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:11px 18px;border-radius:9px;font-weight:750;border:1px solid transparent}
+.primary{background:white;color:var(--navy)}.outline{border-color:#8c9ec8;color:white}
+.profile-card{padding:27px;border:1px solid #53658e;background:#ffffff12;border-radius:22px;box-shadow:0 24px 65px #08132b55}
+.monogram{height:86px;width:86px;border-radius:23px;display:grid;place-items:center;background:linear-gradient(135deg,#fff,#b9caff);color:#18284e;font-weight:900;font-size:1.9rem;margin-bottom:20px}
+.profile-card h3{margin:0 0 4px}.profile-card p{font-size:.9rem;margin:0;color:#d5def1}
+.quick{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:22px}.quick div{border-top:1px solid #64759e;padding-top:10px;font-size:.76rem;color:#d4ddf2}.quick b{display:block;color:white;font-size:.92rem}
+section{padding:78px 0}.section-head{max-width:720px;margin-bottom:30px}.kicker{color:var(--blue)}
+h2{font-size:clamp(2rem,4vw,2.75rem);line-height:1.15;letter-spacing:-.035em;color:var(--navy);margin:8px 0 12px}
+.section-head p,.muted{color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:stretch}
+.panel,.skill,.project,.contact-card{background:white;border:1px solid var(--line);border-radius:17px;box-shadow:0 9px 28px #17274708}
+.panel{padding:25px}.panel h3,.skill h3{color:var(--navy);margin:0 0 8px}
+.panel p{color:var(--muted);margin:0}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fact{padding:17px;background:white;border:1px solid var(--line);border-radius:14px}.fact small{display:block;color:var(--muted);margin-bottom:5px}.fact strong{font-size:.92rem}
+.tint{background:#ebeff8}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.skill{padding:21px}.skill p{margin:0;color:var(--muted);font-size:.92rem}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:19px}
+.project{overflow:hidden}.project-visual{height:180px;display:grid;place-items:center;color:white;font-weight:900;font-size:2rem;letter-spacing:.1em;background:linear-gradient(135deg,#17284e,#536ed0)}
+.project:nth-child(2) .project-visual{background:linear-gradient(135deg,#123e4d,#319b9d)}
+.project:nth-child(3) .project-visual{background:linear-gradient(135deg,#4b2c68,#9b6bc2)}
+.project:nth-child(4) .project-visual{background:linear-gradient(135deg,#713c25,#d18a50)}
+.project-content{padding:22px}.project h3{margin:0 0 7px;color:var(--navy)}.project p{margin:0 0 14px;color:var(--muted);font-size:.92rem}
+.tags{display:flex;gap:7px;flex-wrap:wrap}.tag{background:#edf1ff;color:#3856b6;border-radius:20px;padding:4px 9px;font-size:.75rem;font-weight:750}
+.columns{display:grid;grid-template-columns:1fr 1fr;gap:18px}.list{padding-left:20px;color:var(--muted);margin-bottom:0}.list li{margin:7px 0}
+.contact{background:var(--navy);color:white}.contact h2{color:white}.contact .section-head p{color:#c7d1e6}
+.contact-card{background:#1a2a4e;border-color:#3b4e77;color:white;padding:24px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.contact-card p{color:#c6d1e7;margin:5px 0}.contact-card a:not(.btn){color:#dce5ff;font-weight:700}
+footer{background:#0b1429;color:#aebbd7;text-align:center;padding:20px;font-size:.82rem}
+@media(max-width:780px){.navlinks{gap:13px;overflow:auto;white-space:nowrap;font-size:.82rem}.hero{padding:68px 0}.hero-grid,.about-grid,.columns{grid-template-columns:1fr}.profile-card{max-width:440px}.skills{grid-template-columns:1fr 1fr}.projects{grid-template-columns:1fr}section{padding:60px 0}}
+@media(max-width:480px){nav{align-items:flex-start;flex-direction:column;padding:13px 0}.navlinks{width:100%;padding-bottom:4px}.skills,.facts{grid-template-columns:1fr}.contact-card{display:block}.contact-card .btn{margin-top:14px}}
+</style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="brand">MJL · PORTFOLIO</div>
-    <nav aria-label="Main navigation">
-      <a href="#about">About</a>
-      <a href="#education">Education</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#personal-skills">Soft Skills</a>
-      <a href="#interests">Interests</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <div class="hero">
-    <div class="hero-inner">
-      <div class="eyebrow">Computer Science &amp; Engineering Student</div>
-      <h1>Miftahul Jannat Lamia</h1>
-      <p>
-        Welcome to my portfolio. I am a CSE student at American International
-        University-Bangladesh, interested in software development and learning
-        through practical academic projects.
-      </p>
-      <div class="hero-links">
-        <a class="btn" href="#projects">View My Projects</a>
-        <a class="btn outline" href="#contact">Contact Me</a>
-      </div>
-    </div>
-  </div>
-
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p class="lead">
-        I am currently studying Computer Science and Engineering. I enjoy exploring
-        programming, object-oriented concepts, database-connected applications, and
-        problem-solving. My goal is to keep improving my technical knowledge and
-        gain practical experience through projects and collaboration.
-      </p>
-    </section>
-
-    <section id="education">
-      <h2>Education</h2>
-      <div class="education">
-        <h3>American International University-Bangladesh (AIUB)</h3>
-        <p class="lead">Bachelor of Science in Computer Science &amp; Engineering (BSc in CSE) · In Progress</p>
-        <p>Dhaka, Bangladesh</p>
-      </div>
-    </section>
-
-    <section id="skills">
-      <h2>Technical Skills</h2>
-      <p class="lead">Technologies and topics studied or used in academic work.</p>
-      <div class="skills">
-        <span class="skill">Java</span>
-        <span class="skill">C++</span>
-        <span class="skill">C#</span>
-        <span class="skill">Python</span>
-        <span class="skill">SQL</span>
-        <span class="skill">Object-Oriented Programming</span>
-        <span class="skill">Windows Forms</span>
-        <span class="skill">Java Swing</span>
-        <span class="skill">Database Fundamentals</span>
-        <span class="skill">HTML &amp; CSS</span>
-      </div>
-    </section>
-
-    <section id="projects">
-      <h2>Academic Projects</h2>
-      <div class="project-grid">
-        <article class="project">
-          <h3>Online GD Application</h3>
-          <p class="tech">Java · Swing</p>
-          <p>
-            A desktop application project concept with user registration, login,
-            dashboards, and GD record-related features.
-          </p>
-        </article>
-        <article class="project">
-          <h3>Pet Adoption Management System</h3>
-          <p class="tech">C# · Windows Forms · SQL Server</p>
-          <p>
-            An academic application focused on user registration, input validation,
-            database connectivity, and parameterized SQL queries.
-          </p>
-        </article>
-        <article class="project">
-          <h3>ICU Bed Monitoring &amp; Control System</h3>
-          <p class="tech">Digital Logic Design</p>
-          <p>
-            A digital-logic design project concept for monitoring bed availability,
-            counting occupancy, and displaying status.
-          </p>
-        </article>
-        <article class="project">
-          <h3>Programming &amp; Algorithm Labs</h3>
-          <p class="tech">C++ · Python</p>
-          <p>
-            Coursework exercises involving programming fundamentals, algorithms,
-            problem-solving, and graphical or console-based outputs.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section id="personal-skills">
-      <h2>Personal &amp; Soft Skills</h2>
-      <div class="skills">
-        <span class="skill">Communication</span>
-        <span class="skill">Teamwork</span>
-        <span class="skill">Problem Solving</span>
-        <span class="skill">Time Management</span>
-        <span class="skill">Adaptability</span>
-        <span class="skill">Self-Learning</span>
-      </div>
-      <p class="lead" style="margin-top:14px">
-        I value clear communication, collaboration, continuous learning, and a
-        thoughtful approach to solving problems.
-      </p>
-    </section>
-
-    <section id="interests">
-      <h2>Technical Interests</h2>
-      <div class="project-grid">
-        <article class="project"><h3>Software Development</h3><p>Learning to design and build useful software applications.</p></article>
-        <article class="project"><h3>Web Development</h3><p>Exploring the technologies used to create accessible and responsive websites.</p></article>
-        <article class="project"><h3>Database Management</h3><p>Developing knowledge of data organization, SQL, and database-connected applications.</p></article>
-        <article class="project"><h3>Artificial Intelligence</h3><p>Interested in learning how AI can support practical problem-solving.</p></article>
-      </div>
-    </section>
-
-    <section id="career-goal">
-      <h2>Career Goal</h2>
-      <p class="lead">
-        My goal is to become a skilled software engineer by strengthening my
-        programming foundations, building practical projects, and continuously
-        improving my technical and professional abilities.
-      </p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p class="lead">Feel free to contact me for academic or professional opportunities.</p>
-      <div class="contact-list">
-        <div class="contact-item"><strong>Email</strong><a href="mailto:mfthlmh@gmail.com">mfthlmh@gmail.com</a></div>
-        <div class="contact-item"><strong>Phone</strong><a href="tel:01973785882">01973785882</a></div>
-        <div class="contact-item"><strong>Location</strong>Dhaka, Bangladesh</div>
-        <div class="contact-item"><strong>University</strong>AIUB · CSE</div>
-      </div>
-    </section>
-  </main>
-
-  <footer>© 2026 Miftahul Jannat Lamia · Personal Portfolio</footer>
-</body>
-</html>
+<header><div class="wrap"><nav>
+<a class="brand" href="#home">MJL<span>.</span> PORTFOLIO</a>
+<div class="navlinks"><a href="#about">About</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#interests">Interests</a><a href="#contact">Contact</a></div>
+</nav></div></header>
+<main>
+<section class="hero" id="home"><div class="wrap hero-grid">
+<div><div class="eyebrow">Computer Science &amp; Engineering Student</div>
+<h1>Miftahul Jannat<br><span>Lamia</span></h1>
+<p>I am a CSE student at American International University-Bangladesh, interested in software development, problem-solving, and learning through practical academic projects.</p>
+<div class="actions"><a class="btn primary" href="#projects">Explore Projects</a><a class="btn outline" href="#contact">Contact Me</a></div></div>
+<aside class="profile-card"><div class="monogram">MJL</div><h3>Learning. Building. Improving.</h3><p>Focused on strengthening programming fundamentals and developing useful software solutions through coursework and continuous learning.</p>
+<div class="quick"><div><b>AIUB</b>University</div><div><b>CSE</b>Department</div><div><b>Dhaka</b>Bangladesh</div></div></aside>
+</div></section>
+<section id="about"><div class="wrap">
+<div class="section-head"><div class="kicker">About me</div><h2>A curious learner with a passion for technology.</h2><p>I enjoy exploring how software works, learning new tools, and applying classroom concepts to practical projects.</p></div>
+<div class="about-grid"><div class="panel"><h3>Profile</h3><p>As a Computer Science and Engineering student, I am building my foundation in programming, object-oriented concepts, databases, and software development. I value continuous learning, teamwork, and thoughtful problem-solving.</p></div>
+<div class="facts" id="education"><div class="fact"><small>Based in</small><strong>Dhaka, Bangladesh</strong></div><div class="fact"><small>University</small><strong>American International University-Bangladesh</strong></div><div class="fact"><small>Degree</small><strong>B.Sc. in Computer Science &amp; Engineering</strong></div><div class="fact"><small>Focus</small><strong>Software Development</strong></div></div></div>
+</div></section>
+<section class="tint" id="skills"><div class="wrap"><div class="section-head"><div class="kicker">Technical toolkit</div><h2>Skills I am developing</h2><p>Technologies and concepts explored through academic coursework and projects.</p></div>
+<div class="skills"><div class="skill"><h3>Programming</h3><p>Java, C++, C#, Python</p></div><div class="skill"><h3>Web Fundamentals</h3><p>HTML, CSS</p></div><div class="skill"><h3>Database</h3><p>SQL and database fundamentals</p></div><div class="skill"><h3>Application Development</h3><p>Java Swing, Windows Forms</p></div><div class="skill"><h3>Core Concepts</h3><p>Object-Oriented Programming, algorithms, problem-solving</p></div><div class="skill"><h3>Tools &amp; Practice</h3><p>GitHub and programming IDEs</p></div></div></div></section>
+<section id="projects"><div class="wrap"><div class="section-head"><div class="kicker">Selected academic work</div><h2>Projects &amp; practical learning</h2><p>A selection of coursework projects and exercises that helped me apply programming and engineering concepts.</p></div>
+<div class="projects">
+<article class="project"><div class="project-visual">JAVA</div><div class="project-content"><h3>Online GD Application</h3><p>A Java Swing desktop application concept with user registration, login, dashboards, and GD record-related features.</p><div class="tags"><span class="tag">Java</span><span class="tag">Swing</span><span class="tag">OOP</span></div></div></article>
+<article class="project"><div class="project-visual">C# · SQL</div><div class="project-content"><h3>Pet Adoption Management System</h3><p>A Windows Forms academic project featuring user registration, input validation, and SQL Server database connectivity.</p><div class="tags"><span class="tag">C#</span><span class="tag">Windows Forms</span><span class="tag">SQL Server</span></div></div></article>
+<article class="project"><div class="project-visual">LOGIC</div><div class="project-content"><h3>ICU Bed Monitoring &amp; Control System</h3><p>A digital logic design project exploring bed-status monitoring, counters, display outputs, and control logic.</p><div class="tags"><span class="tag">Digital Logic</span><span class="tag">Counters</span><span class="tag">FSM</span></div></div></article>
+<article class="project"><div class="project-visual">C++ / PY</div><div class="project-content"><h3>Programming &amp; Algorithm Labs</h3><p>Academic exercises in C++ and Python covering programming fundamentals, algorithms, and problem-solving techniques.</p><div class="tags"><span class="tag">C++</span><span class="tag">Python</span><span class="tag">Algorithms</span></div></div></article>
+</div></div></section>
+<section class="tint" id="interests"><div class="wrap"><div class="section-head"><div class="kicker">Beyond coursework</div><h2>Interests &amp; strengths</h2><p>Areas I am interested in exploring as I continue my learning journey.</p></div>
+<div class="columns"><div class="skill"><h3>Technical Interests</h3><ul class="list"><li>Software and application development</li><li>Web development</li><li>Database management</li><li>Artificial intelligence and emerging technologies</li></ul></div><div class="skill"><h3>Personal Strengths</h3><ul class="list"><li>Communication and teamwork</li><li>Problem-solving mindset</li><li>Time management and adaptability</li><li>Self-learning and continuous improvement</li></ul></div></div></div></section>
+<section><div class="wrap"><div class="section-head"><div class="kicker">Career direction</div><h2>My goal</h2></div><div class="panel"><p class="muted">My goal is to grow as a software professional by strengthening my technical foundation, gaining practical experience, and contributing to meaningful software projects. I am eager to keep learning and take on new challenges.</p></div></div></section>
+<section class="contact" id="contact"><div class="wrap"><div class="section-head"><div class="kicker" style="color:#aebfff">Get in touch</div><h2>Let's connect.</h2><p>For academic collaboration and professional opportunities, feel free to reach out.</p></div>
+<div class="contact-card"><div><h3>Miftahul Jannat Lamia</h3><p>Dhaka, Bangladesh</p><p><a href="mailto:mfthlmh@gmail.com">mfthlmh@gmail.com</a> · <a href="tel:01973785882">01973785882</a></p><p><a href="https://github.com/JannatLamia" target="_blank" rel="noopener">GitHub Profile</a> · <a href="https://jannatlamia.github.io/Portfolio-/" target="_blank" rel="noopener">Portfolio Website</a></p></div><a class="btn primary" href="mailto:mfthlmh@gmail.com">Email Me</a></div></div></section>
+</main>
+<footer>© 2026 Miftahul Jannat Lamia · Personal Academic Portfolio</footer>
+</body></html>
